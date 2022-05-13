@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppoins", sans-serif;
+}
+
+body, head {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    height: 300px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+nav {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 14px;
+}
+.nav-brand {
+    margin-top: 30px;
+}
+.nav-brand img {
+    width: 100%;
+}
+
+.menu-items {
+    display: flex;
+    list-style-type: none;
+    margin-top: 30px;
+    padding: 0;
+    align-items: center;
+}
+
+.menu-items li {
+    margin-right: 15px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* display: none;
+    opacity: -1; ocutar o menu resolução menor */
+}
+.menu-items a {
+    color: #65605b;
+    text-decoration: none; 
+    font-weight: bold;
+
+}
+
+.jt-main {
+    padding: 0 10px;
+}
+
+#attendance {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 20px 0 20px 0;
+}
+
+.jt-attendance {
+    display: flex;
+    flex-direction: column;
+}
+
+.jt-attendance-card {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 20px;
+    margin-top: -49px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+}
+.jt-attendance-img {
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+}
+
+.jt-occupation-title {
+    text-align: center;
+}
+
+.jt-occupation-card {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#acting {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 20px 0 20px 0;
+}
+
+
+.acting-title {
+    margin: 25px 0 25px 0;
+    font-size: 1.5rem;
+    color: #6c5e59;
+    font-weight: bold;
+    border-bottom: solid 1px #e6504d;
+}
+
+.jt-acting-card {
+    background-color: #FDF6EC;
+    margin-top: 35px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.jt-acting-card-description p {
+    font-size: 1rem;
+    color: #65605b;
+}
+
+
+@media(min-width: 768px)  {
+    nav {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .nav-brand {
+        margin-top: 30px;
+    }
+    .menu-items {
+        margin-top: 30px;
+    }
+    .menu-items li {
+        margin-right: 15px;
+        font-size: 1.3rem;
+    }
+    .jt-attendance {
+        flex-direction: row;
+    }
+    .jt-attendance-card {
+        width: 50%;
+        margin-right: 9px;
+        margin-bottom: 10px;
+    }
+
+    .jt-occupation-card {
+        flex-direction: row;
+        width: 100%;
+        margin-right: 9px;
+    }
+}
