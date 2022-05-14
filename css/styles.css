@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -11,7 +11,7 @@ body, head {
 }
 
 header {
-    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    background-color: #F3E9DD;
     height: 300px;
 }
 
@@ -28,24 +28,29 @@ nav {
     flex-direction: column;
     padding: 14px;
 }
-.nav-brand {
-    margin-top: 30px;
+
+main {
+    background-color: #FDF6EC;
 }
+/*.nav-brand {
+    margin-top: 30px;
+}*/
 .nav-brand img {
-    width: 100%;
+    width: 200px;
 }
 
 .menu-items {
     display: flex;
     list-style-type: none;
-    margin-top: 30px;
+    margin: 2.5rem 0 0 0;
     padding: 0;
     align-items: center;
 }
 
 .menu-items li {
-    margin-right: 15px;
-    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 0.80rem;
+    font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
     /* display: none;
@@ -55,55 +60,118 @@ nav {
     color: #65605b;
     text-decoration: none; 
     font-weight: bold;
-
+    cursor: pointer;
+    transition: 400MS;
+    
 }
 
-.jt-main {
-    padding: 0 10px;
+.menu-items a:hover {
+    color: #ee3236;
+    border-bottom: solid 1px #141414;
+    opacity: 0.6;
 }
 
 #attendance {
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    padding: 20px 0 20px 0;
+    position: relative;
+    bottom: 50px;
+    /*background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 20px 0 20px 0;*/
 }
 
-.jt-attendance {
+.jt-attendance-container {
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
 }
 
 .jt-attendance-card {
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-color: #DAB88B;
     padding: 20px;
-    margin-top: -49px;
-    margin-bottom: 60px;
-    border-radius: 10px;
+    /*margin: 0 0 1.75rem 0;*/
+    margin: 0 10px 1.75rem 0;
+    border-radius: 10px;  
+    opacity: 1;
+    box-shadow: 5px 5px 5px 0 #DAB88B;
+}
+
+.jt-attendance-card:hover {
+    opacity: 0.8;
+    
+    transition: 400MS;
+    cursor: pointer;
+    border: 3px solid #24211d;
 }
 .jt-attendance-img {
-    width: 20%;
-    margin-left: 40%;
+    width: 80px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.titles-cards-attendace {
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-bottom: solid 1px #ee3236;
+}
+
+.jt-attendance-card-description {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .jt-occupation-title {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-bottom: solid 1px #ee3236;
+}
+
+.jt-occupation-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
 }
 
 .jt-occupation-card {
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background-color: #DAB88B;
+    /*background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);*/
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin: 1.5rem 0;
+    box-shadow: 5px 5px 5px 0 #DAB88B;
+}
+
+.titles-cards-occupation {
+    text-align: center;
+    border-bottom: solid 0.03rem #ee3236;
+
+}
+
+.jt-occupation-card-description {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+
 }
 
 #acting {
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    /*background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);*/
     padding: 20px 0 20px 0;
+}
+
+.jt-acting-container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .acting-title {
-    margin: 25px 0 25px 0;
+    margin: 25px 0;
     font-size: 1.5rem;
     color: #6c5e59;
     font-weight: bold;
@@ -111,16 +179,25 @@ nav {
 }
 
 .jt-acting-card {
-    background-color: #FDF6EC;
-    margin-top: 35px;
+    background-color: #DAB88B;
+    margin: 1.5rem 0;
     padding: 20px;
     border-radius: 10px;
 }
 
-.jt-acting-card-description p {
+.jt-acting-card-description {
     font-size: 1rem;
     color: #65605b;
 }
+
+.profile-image-acting {
+    width: 40%;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+}
+
+
 
 
 @media(min-width: 768px)  {
@@ -138,18 +215,29 @@ nav {
         margin-right: 15px;
         font-size: 1.3rem;
     }
-    .jt-attendance {
+    .jt-attendance-container {
         flex-direction: row;
     }
     .jt-attendance-card {
-        width: 50%;
-        margin-right: 9px;
-        margin-bottom: 10px;
+        width: 100%;
+        /*margin-right: 2rem;*/
+        margin-bottom: 0;
     }
+
+    /*.jt-occupation-container {
+        flex-direction: row;
+    }*/
 
     .jt-occupation-card {
         flex-direction: row;
         width: 100%;
-        margin-right: 9px;
+        /*margin-right: 2rem;*/
+    }
+
+    .jt-acting-container {
+        flex-direction: row;
+    }
+    .jt-acting-card {
+        /*margin-right: 2rem;*/
     }
 }
