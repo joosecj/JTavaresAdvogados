@@ -12,7 +12,7 @@ body, head {
 
 header {
     background-color: #F3E9DD;
-    height: 300px;
+    /*height: 300px;*/
 }
 
 .container {
@@ -22,22 +22,50 @@ header {
 }
 
 nav {
-    width: 1200px;
+    /*width: 1200px;*/
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 14px;
+    padding: 3.5rem 0;
 }
 
 main {
     background-color: #FDF6EC;
 }
-/*.nav-brand {
-    margin-top: 30px;
-}*/
+
+.nav-brand {
+    padding-left: 0.8rem;
+    -webkit-animation: nav-brand 0.10s backwards;
+	        animation: nav-brand 0.10s backwards;
+}
 .nav-brand img {
     width: 200px;
 }
+
+@-webkit-keyframes nav-brand {
+    0% {
+      -webkit-transform: rotate(-540deg) scale(0);
+              transform: rotate(-540deg) scale(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes snav-brand {
+    0% {
+      -webkit-transform: rotate(-540deg) scale(0);
+              transform: rotate(-540deg) scale(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
 
 .menu-items {
     display: flex;
@@ -71,11 +99,26 @@ main {
     opacity: 0.6;
 }
 
+.jt-banner-container{
+    position: relative;
+}
+
+.jt-banner-bg {
+    position: relative;
+    bottom: 1rem;
+}
+
+.jt-banner-image {
+    width: 100%; 
+}
+#animation-banner {
+    -webkit-animation: animation-banner 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+	        animation: animation-banner 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+}
+
 #attendance {
     position: relative;
     bottom: 50px;
-    /*background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    padding: 20px 0 20px 0;*/
 }
 
 .jt-attendance-container {
@@ -85,18 +128,14 @@ main {
 }
 
 .jt-attendance-card {
-    background-color: #DAB88B;
     padding: 20px;
-    /*margin: 0 0 1.75rem 0;*/
     margin: 0 10px 1.75rem 0;
-    border-radius: 10px;  
-    opacity: 1;
-    box-shadow: 5px 5px 5px 0 #DAB88B;
+    border-radius: 4px;
+    background: #ebebeb;
+    box-shadow: -3px 35px 24px #bebebe, -16px 2px 62px #ffffff;
 }
 
 .jt-attendance-card:hover {
-    opacity: 0.8;
-    
     transition: 400MS;
     cursor: pointer;
     border: 3px solid #24211d;
@@ -105,6 +144,10 @@ main {
     width: 80px;
     display: flex;
     margin: 0 auto;
+}
+.jt-attendance-img:hover {
+    opacity: 0.5;
+    transition: 400MS;
 }
 
 .titles-cards-attendace {
@@ -136,12 +179,14 @@ main {
 }
 
 .jt-occupation-card {
-    background-color: #DAB88B;
-    /*background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);*/
     padding: 20px;
-    border-radius: 10px;
-    margin: 1.5rem 0;
-    box-shadow: 5px 5px 5px 0 #DAB88B;
+    margin: 3rem 0;
+    border-radius: 4px;
+    background: #ebebeb;
+    box-shadow: 25px 25px 62px #bebebe, -25px -25px 62px #ffffff;
+}
+.jt-occupation-image {
+    width: 100%;
 }
 
 .titles-cards-occupation {
@@ -166,9 +211,8 @@ main {
 .jt-acting-container {
     padding: 0 10px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
-
 
 .acting-title {
     margin: 25px 0;
@@ -179,34 +223,269 @@ main {
 }
 
 .jt-acting-card {
-    background-color: #DAB88B;
-    margin: 1.5rem 0;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 4px;
+    background: #ebebeb;
+    box-shadow: 25px 25px 62px #bebebe, -25px -25px 62px #ffffff;
 }
 
 .jt-acting-card-description {
     font-size: 1rem;
     color: #65605b;
+    line-height: 1.5rem;
+}
+
+.rede-social {
+    display: flex;
+    justify-content: center;
+}
+
+.rede-social::before {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.rede-social a {
+    padding: 10px;
+}
+.image-rede:hover {
+    opacity: 0.5;
+    border: #141414;
+}
+
+.image-rede {
+    width: 30px;
 }
 
 .profile-image-acting {
-    width: 40%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     display: flex;
     margin: 0 auto;
+    border: 5px solid #e6504d;
 }
 
+.jt-contact-container {
+    padding: 0 0.625rem;
 
+}
+   
+   .jt-contact-card {
+       background-color: #DAB88B;
+       display: flex;
+       border-radius: 4px;
+       background: #ebebeb;
+       box-shadow: 25px 25px 62px #bebebe, -25px -25px 62px #ffffff;
+   }
+   
+   .jt-contact-card-control {
+       margin: 0 auto;
+   }
+   
+   .contact-name {
+       margin-bottom: 1.25rem;
+       margin-top: 3.25rem;
+   }
+   #ctrl-name {
+       /*margin: 0 12px 0 8px;*/
+       width: 100%;
+       height: 50px;
+       border: 1px solid var(--text-gray);
+       border-radius: 0.5rem;
+       padding: 13px 28px 13px 22px;
+       font-size: 1rem;
+       color: #C4C4C4;
+   }
+
+   .contact-name, .contact-email, .receive-news {
+       padding: 0 1rem;
+   }
+   
+   #ctrl-email {
+       /*margin: 0 12px 0 8px;*/
+       width: 100%;
+       height: 50px;
+       border: 1px solid #141414;
+       border-radius: 0.5rem;
+       padding: 13px 28px 13px 22px;
+       font-size: 1rem;
+       color: #C4C4C4;
+   }
+
+   .jt-contact-text {
+       padding: 1rem;
+   }
+   #ctrl-text {
+       width: 100%;
+       border-radius: 0.5rem;
+       border: 1px solid #141414;
+       padding: 13px 28px 13px 22px;
+       color: #C4C4C4;
+       font-size: 1rem;
+
+
+   }
+   
+   .jt-contact-favorite {
+       margin-top: 1.25rem;
+       color: #999999;
+       font-size: 1rem;
+       padding: 0 1rem;
+   }
+   
+   .favorite-title {
+       margin-left: 10px;
+   }
+   
+   #ctrl-level {
+       margin-top: 8px;
+   }
+   
+   #ctrl-level label {
+       padding-left: 7px;
+       cursor: pointer;
+   }
+   
+   .radio {
+       cursor: pointer;
+       appearance: none;
+       width: 23px;
+       height: 23px;
+       border: 1px solid #999999;  
+       border-radius: 50%;
+       position: relative;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       outline: none;
+       flex-wrap: wrap;
+     }
+     .radio:before {
+       content: '';
+       width: 9px;
+       height: 9px;
+       background: #999999;
+       border-radius: 50%;
+       opacity: 0;
+       transition: all 600ms ease-in-out;
+       position: absolute;
+       flex-wrap: wrap;
+     }
+     
+     .radio:checked:before {
+       opacity: 2;
+     }
+     
+     .radio:focus {
+       box-shadow: 0 0 5px #cccccc;
+     }
+     
+   .receive-news {
+       font-size: 14px;
+       color: #999999;
+       margin: 28px 0 0 0;
+   }
+   
+   .container-form {
+       display: flex;
+       align-items: center;
+       margin: 8px 0 7px 0;
+   }
+   
+   .ctrl-receive {
+       margin-right: 9px;
+       cursor: pointer;
+       appearance: none;
+       width: 23px;
+       height: 23px;
+       border: 1px solid #999999;  
+       position: relative;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       outline: none;
+       flex-wrap: wrap;
+     }
+   
+     .ctrl-receive:before {
+       content: '';
+       width: 9px;
+       height: 9px;
+       background: #999999;
+       border-radius: 50%;
+       opacity: 0;
+       transition: all 600ms ease-in-out;
+       position: absolute;
+       flex-wrap: wrap;
+     }
+     
+     .ctrl-receive:checked:before {
+       opacity: 2;
+     }
+     
+     .ctrl-receive:focus {
+       box-shadow: 0 0 5px #cccccc;
+     }
+   
+   .btn-form {
+       align-items: center;
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       margin-bottom: 33px;
+       margin-top: 38px;
+   }
+   
+   .btn-form-send {
+       margin: 10px;
+       background-color: green;
+       height: 67px;
+       width: 244px;
+       border-radius: 8px;
+       font-size: 18px;
+       border: 2px solid #c78b8a;
+       border: unset;
+       cursor: pointer;
+   }
+   
+   .btn-form-reset {
+       margin: 10px;
+       background-color: transparent;
+       height: 67px;
+       width: 244px;
+       border-radius: 8px;
+       color: #fff;
+       font-size: 18px;
+       border: 2px solid #e6504d;
+       cursor: pointer;
+   }
+   
+   .jt-contact-maps {
+       padding: 3rem 0.625rem;
+   }
+
+footer {
+    background-color: #DAB88B;
+    height: 250px;
+
+}
 
 
 @media(min-width: 768px)  {
     nav {
         justify-content: space-between;
         flex-direction: row;
-    }
-    .nav-brand {
-        margin-top: 30px;
     }
     .menu-items {
         margin-top: 30px;
@@ -233,11 +512,37 @@ main {
         width: 100%;
         /*margin-right: 2rem;*/
     }
+    .jt-occupation-image {
+        height: 441px;
+    }
 
-    .jt-acting-container {
-        flex-direction: row;
-    }
-    .jt-acting-card {
-        /*margin-right: 2rem;*/
-    }
 }
+
+@-webkit-keyframes animation-banner {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes animation-banner {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
