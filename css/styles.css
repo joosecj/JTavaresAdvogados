@@ -21,7 +21,7 @@ header {
     max-width: 960px;
 }
 
-nav {
+#nav-header {
     /*width: 1200px;*/
     display: flex;
     align-items: center;
@@ -274,17 +274,16 @@ main {
     border: 5px solid #e6504d;
 }
 
-.jt-contact-container {
+/*.jt-contact-container {
     padding: 0 0.625rem;
 
-}
+}*/
    
    .jt-contact-card {
-       background-color: #DAB88B;
        display: flex;
        border-radius: 4px;
        background: #ebebeb;
-       box-shadow: 25px 25px 62px #bebebe, -25px -25px 62px #ffffff;
+       /*box-shadow: 25px 25px 62px #bebebe, -25px -25px 62px #ffffff;*/
    }
    
    .jt-contact-card-control {
@@ -477,8 +476,99 @@ main {
 
 footer {
     background-color: #DAB88B;
-    height: 250px;
+    
+}
 
+.footer-card-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 5rem 0.625rem;
+}
+.footer-card-first {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.footer-card-first img {
+    width: 150px;
+}
+.copy-footer {
+    margin: 1.5rem 0 0 0;
+}
+.copy-footer::before {
+    content: "©";
+}
+.footer-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem 0;
+}
+.card-first-rede-social {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-first-rede-social img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.footer-card-second {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-items-footer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+    text-align: center;
+}
+.menu-items-footer  a {
+    text-decoration: none;
+}
+
+.footer-card-third {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-card-third a {
+    list-style-type: none;
+    color: #fff;
+}
+.card-third-contact img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.developer-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem 0.625rem 1.5rem 0.625rem;
+    border-top: 1px solid #000;
+}
+/*
+.developer-footer::before {
+    background-color: #000;
+    content: "©";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+*/
+.developer-social img {
+    width: 30px;
+    margin: 0 0.3rem 0 0.5rem;
 }
 
 
@@ -515,6 +605,11 @@ footer {
     .jt-occupation-image {
         height: 441px;
     }
+    .footer-card-container {
+        flex-direction: row; 
+        justify-content:space-around;
+    }
+    
 
 }
 
